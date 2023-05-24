@@ -1,0 +1,48 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Infrastructure\MinishopDBInitializer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EntityFramework" Version="6.4.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.5">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="7.0.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Areas\Admin\Data\" />
+    <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="Areas\FrontEnd\Controllers\" />
+    <Folder Include="Areas\FrontEnd\Data\" />
+    <Folder Include="Areas\FrontEnd\Models\" />
+    <Folder Include="DB\" />
+    <Folder Include="wwwroot\frontend\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Minishop.sln" />
+    <None Include="wwwroot\admin\vendor\fonts\boxicons\boxicons.svg" />
+    <None Include="wwwroot\admin\vendor\fonts\boxicons\boxicons.woff2" />
+    <None Include="wwwroot\admin\vendor\js\bootstrap.js" />
+    <None Include="wwwroot\admin\vendor\js\helpers.js" />
+    <None Include="wwwroot\admin\vendor\js\menu.js" />
+    <None Include="wwwroot\admin\vendor\libs\apex-charts\apexcharts.js" />
+    <None Include="wwwroot\admin\vendor\libs\highlight\highlight.js" />
+    <None Include="wwwroot\admin\vendor\libs\jquery\jquery.js" />
+    <None Include="wwwroot\admin\vendor\libs\masonry\masonry.js" />
+    <None Include="wwwroot\admin\vendor\libs\perfect-scrollbar\perfect-scrollbar.js" />
+    <None Include="wwwroot\admin\vendor\libs\popper\popper.js" />
+  </ItemGroup>
+
+</Project>
